@@ -28,11 +28,11 @@ export const teams = [
 ];
 
 export const seasons = [
-  { id: 'season-1', name: 'Season 1', slug: 'season-1', status: 'completed' },
-  { id: 'season-2', name: 'Season 2', slug: 'season-2', status: 'completed' },
-  { id: 'season-3', name: 'Season 3', slug: 'season-3', status: 'completed' },
-  { id: 'season-4', name: 'Season 4', slug: 'season-4', status: 'completed' },
-  { id: 'season-5', name: 'Season 5', slug: 'season-5', status: 'active' },
+  { id: 'season-1', name: 'Season 1', slug: 'season-1', status: 'completed', mvpPlayerId: 'haaland' },
+  { id: 'season-2', name: 'Season 2', slug: 'season-2', status: 'completed', mvpPlayerId: 'haaland' },
+  { id: 'season-3', name: 'Season 3', slug: 'season-3', status: 'completed', mvpPlayerId: 'haaland' },
+  { id: 'season-4', name: 'Season 4', slug: 'season-4', status: 'completed', mvpPlayerId: 'haaland' },
+  { id: 'season-5', name: 'Season 5', slug: 'season-5', status: 'active', mvpPlayerId: 'haaland' },
 ];
 
 export const players = [
