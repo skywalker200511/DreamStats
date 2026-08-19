@@ -1,0 +1,256 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Season Leaderboard - StrikerStats</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ffb4ab",
+                    "on-error": "#690005",
+                    "on-secondary-container": "#e6ecff",
+                    "secondary-fixed": "#d8e2ff",
+                    "on-tertiary-container": "#009542",
+                    "primary-container": "#0f172a",
+                    "surface-bright": "#2c3a4c",
+                    "tertiary-fixed-dim": "#4ae176",
+                    "inverse-on-surface": "#233143",
+                    "tertiary-container": "#001d07",
+                    "on-tertiary": "#003915",
+                    "on-primary-fixed": "#131b2e",
+                    "on-secondary": "#002e6a",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "tertiary": "#4ae176",
+                    "tertiary-fixed": "#6bff8f",
+                    "secondary-fixed-dim": "#adc6ff",
+                    "on-tertiary-fixed-variant": "#005321",
+                    "on-surface": "#d4e4fa",
+                    "secondary": "#adc6ff",
+                    "surface-container-lowest": "#010f1f",
+                    "surface-container-highest": "#273647",
+                    "secondary-container": "#0566d9",
+                    "on-background": "#d4e4fa",
+                    "surface": "#051424",
+                    "surface-variant": "#273647",
+                    "outline": "#909097",
+                    "on-error-container": "#ffdad6",
+                    "background": "#051424",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-primary": "#283044",
+                    "surface-container-high": "#1c2b3c",
+                    "primary-fixed": "#dae2fd",
+                    "on-surface-variant": "#c6c6cd",
+                    "surface-dim": "#051424",
+                    "on-secondary-fixed": "#001a42",
+                    "surface-container-low": "#0d1c2d",
+                    "on-primary-container": "#798098",
+                    "inverse-primary": "#565e74",
+                    "surface-container": "#122131",
+                    "on-secondary-fixed-variant": "#004395",
+                    "outline-variant": "#45464d",
+                    "inverse-surface": "#d4e4fa",
+                    "error-container": "#93000a",
+                    "primary": "#bec6e0",
+                    "on-tertiary-fixed": "#002109",
+                    "surface-tint": "#bec6e0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "component-padding": "0.75rem 1rem",
+                    "stack-md": "1rem",
+                    "stack-xs": "0.25rem",
+                    "container-margin": "1rem",
+                    "stack-sm": "0.5rem",
+                    "gutter": "0.75rem"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "stat-large": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "mono-data": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "stat-large": ["24px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "mono-data": ["13px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen pb-20">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface border-b border-outline-variant flex items-center justify-between px-container-margin h-16 w-full max-w-full docked full-width top-0 sticky z-40 flat no shadows">
+<div class="flex items-center gap-2">
+<img src="https://lh3.googleusercontent.com/aida/AP1WRLvcdSl-s1owthSldzYX_Ji4UA0x5m_dOizmC5kdId0vwv2fOt5goAOURIohTDa4TflEjdiRfgzECaulHsauFIQUFX1nkO0_0gl7rXaDzBnHdIW-b6Ddz2nI3L0pGnexREcSMoMUGef9GQDhO5sUlf67ZHr7agEgjb4y3MXdZDPLnN2FDdh4goxf1trq4OLQHdWr1AA8FrM9i7oqfGpBLvUdBWeEJEVjiOzWk4mtP39DcOyhShnI4zCIaqI" alt="DREAM STATS Logo" class="w-8 h-8 object-contain">
+<span class="text-headline-md font-headline-md font-bold tracking-tighter text-primary dark:text-primary">DREAM STATS</span>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-caps font-label-caps" href="#">Home</a>
+<a class="text-primary border-b-2 border-primary hover:text-primary transition-colors text-label-caps font-label-caps opacity-80" href="#">Leagues</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-caps font-label-caps" href="#">Matches</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-caps font-label-caps" href="#">News</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-caps font-label-caps" href="#">Favorites</a>
+</div>
+<button class="text-primary dark:text-primary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+</header>
+<main class="max-w-7xl mx-auto p-container-margin space-y-stack-md">
+<!-- Header Section -->
+<section class="flex items-center gap-4 bg-surface-container-low p-4 rounded-lg border border-outline-variant">
+<img class="w-16 h-16 object-contain rounded-full bg-surface-container" data-alt="A detailed, modern sports logo placeholder image for a football league, featuring metallic accents and a dark background. High-quality vector graphics style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtQ6Tt6GTRhZtaW6lMfJr-2k3KoTjaRBtjdHhNDnkgoHpvG_6H1ZIcGgSSShS6LR2e7HTVXQna3PueWYgf_oAO2xdWpwjI65kPoHwGgPYBIundN1gJNgWwhJOFJ48Pb0pUjLFBYzSBbuI5WVca5e-knEEQMBgUYlu0mHGyOHzIVCHOeoTcoFeKzrr1BkimlZAU2pzB-yHoHplDlZGOYwAPhIQPiQsLYQ1fhwmHjBlqg4PBMa-lk2R59g">
+<div>
+<h1 class="text-headline-md font-headline-md text-on-surface">Season 4 Overview</h1>
+<p class="text-body-sm text-on-surface-variant">Global Premier League</p>
+</div>
+</section>
+<!-- Leaderboard Table -->
+<section class="bg-surface border border-outline-variant rounded-lg overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[600px]">
+<thead class="bg-surface-container-high border-b border-outline-variant sticky top-0">
+<tr>
+<th class="p-component-padding text-label-caps font-label-caps text-on-surface-variant cursor-pointer hover:text-primary transition-colors">
+<div class="flex items-center gap-1">Player <span class="material-symbols-outlined text-[16px]">arrow_drop_down</span></div>
+</th>
+<th class="p-component-padding text-label-caps font-label-caps text-on-surface-variant cursor-pointer hover:text-primary transition-colors">Team</th>
+<th class="p-component-padding text-label-caps font-label-caps text-on-surface-variant text-right cursor-pointer hover:text-primary transition-colors">
+<div class="flex items-center justify-end gap-1">G <span class="material-symbols-outlined text-[16px]">arrow_drop_down</span></div>
+</th>
+<th class="p-component-padding text-label-caps font-label-caps text-on-surface-variant text-right cursor-pointer hover:text-primary transition-colors">A</th>
+<th class="p-component-padding text-label-caps font-label-caps text-on-surface-variant text-right cursor-pointer hover:text-primary transition-colors">G+A</th>
+<th class="p-component-padding text-label-caps font-label-caps text-on-surface-variant text-right cursor-pointer hover:text-primary transition-colors">G/G</th>
+<th class="p-component-padding text-label-caps font-label-caps text-on-surface-variant text-right cursor-pointer hover:text-primary transition-colors">A/G</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/50">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="p-component-padding">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-label-caps font-label-caps text-primary">EK</div>
+<div>
+<div class="text-body-md font-body-md font-medium text-on-surface">E. Kante</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">FWD</div>
+</div>
+</div>
+</td>
+<td class="p-component-padding">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 object-contain" data-alt="A modern, highly detailed football club crest with a sleek geometric design. The logo is rendered in dark navy and vibrant primary colors, set against a transparent or very dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXtKF3R5ata5jniubHLAcutIEr81buddCAJOAAwsvtU5gfUAtDdQzv_sKQMJDL3Pu09voBDKzrsOZKDzCgBfByMVjfY7bLmXHengsA3TtyrMygDAUDr3OcqQEZtuI_B4_SSDW6NXyuVYc-0qBA9FRAZOSyWYNP6qYUE7gF7N0i5U_fpSVjMj3USB-zveiatJnC4WFn1S8MWtyMRHOiEw1RdT7kkaj9IvJuYrcJspvSdHVSXpnVyytF1A">
+<span class="text-body-sm font-body-sm hidden sm:inline">Saiboys United</span>
+</div>
+</td>
+<td class="p-component-padding text-right font-mono-data text-mono-data text-primary">24</td>
+<td class="p-component-padding text-right font-mono-data text-mono-data text-on-surface">8</td>
+<td class="p-component-padding text-right font-mono-data text-mono-data text-tertiary">32</td>
+<td class="p-component-padding text-right font-mono-data text-mono-data text-on-surface-variant">0.86</td>
+<td class="p-component-padding text-right font-mono-data text-mono-data text-on-surface-variant">0.29</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="p-component-padding">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-label-caps font-label-caps text-primary">MS</div>
+<div>
+<div class="text-body-md font-body-md font-medium text-on-surface">M. Silva</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">MID</div>
+</div>
+</div>
+</td>
+<td class="p-component-padding">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 object-contain" data-alt="A modern, minimalist football club badge featuring sharp angles and a bold typographic monogram. The design is sleek, using deep blues and stark whites to convey authority and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxPGMLejI2pHmNmb03zagF0esGaOxo_YFAgBMXffVD-abe5NDDXrTDtzCTjcISCxQFhG59-1rNjoD8YIPl7sg_cG_yknOEPh9vYuWm2JI_TV1f2v0jRD6ZEYP7ymws3esXxr2LayzDv2K6e_Zhq4yhMuUPJY4srBnSNDeKzdQb2kVw3d6HvUMmAgLLa9FctTDV2oXRm5nno09zcS4upLWwVeK4_GDT8QVw70MpGlIC8O0Wn6_Antp7_w">
+<span class="text-body-sm font-body-sm hidden sm:inline">Central Stags</span>
+</div>
+</td>
+<td class="p-component-padding text-right font-mono-data text-mono-data text-primary">18</td>
+<td class="p-component-padding text-right font-mono-data text-mono-data text-on-surface">14</td>
+<td class="p-component-padding text-right font-mono-data text-mono-data text-tertiary">32</td>
+<td class="p-component-padding text-right font-mono-data text-mono-data text-on-surface-variant">0.64</td>
+<td class="p-component-padding text-right font-mono-data text-mono-data text-on-surface-variant">0.50</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="p-component-padding">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-label-caps font-label-caps text-primary">AR</div>
+<div>
+<div class="text-body-md font-body-md font-medium text-on-surface">A. Rossi</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">FWD</div>
+</div>
+</div>
+</td>
+<td class="p-component-padding">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 object-contain" data-alt="A detailed, modern sports logo placeholder image for a football league, featuring metallic accents and a dark background. High-quality vector graphics style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXtKF3R5ata5jniubHLAcutIEr81buddCAJOAAwsvtU5gfUAtDdQzv_sKQMJDL3Pu09voBDKzrsOZKDzCgBfByMVjfY7bLmXHengsA3TtyrMygDAUDr3OcqQEZtuI_B4_SSDW6NXyuVYc-0qBA9FRAZOSyWYNP6qYUE7gF7N0i5U_fpSVjMj3USB-zveiatJnC4WFn1S8MWtyMRHOiEw1RdT7kkaj9IvJuYrcJspvSdHVSXpnVyytF1A">
+<span class="text-body-sm font-body-sm hidden sm:inline">Saiboys United</span>
+</div>
+</td>
+<td class="p-component-padding text-right font-mono-data text-mono-data text-primary">21</td>
+<td class="p-component-padding text-right font-mono-data text-mono-data text-on-surface">6</td>
+<td class="p-component-padding text-right font-mono-data text-mono-data text-tertiary">27</td>
+<td class="p-component-padding text-right font-mono-data text-mono-data text-on-surface-variant">0.75</td>
+<td class="p-component-padding text-right font-mono-data text-mono-data text-on-surface-variant">0.21</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-16 px-2 bg-surface border-t border-outline-variant z-50 flat no shadows">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors w-full h-full rounded-lg" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-caps font-label-caps mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-tertiary font-bold hover:bg-surface-container-low transition-transform scale-95 w-full h-full rounded-lg" href="#">
+<span class="material-symbols-outlined filled">trophy</span>
+<span class="text-label-caps font-label-caps mt-1">Leagues</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors w-full h-full rounded-lg" href="#">
+<span class="material-symbols-outlined">sports_soccer</span>
+<span class="text-label-caps font-label-caps mt-1">Matches</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors w-full h-full rounded-lg" href="#">
+<span class="material-symbols-outlined">newspaper</span>
+<span class="text-label-caps font-label-caps mt-1">News</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors w-full h-full rounded-lg" href="#">
+<span class="material-symbols-outlined">star</span>
+<span class="text-label-caps font-label-caps mt-1">Favorites</span>
+</a>
+</nav>
+
+
+</body></html>

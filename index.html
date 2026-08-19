@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Stats — Football Statistics Platform</title>
+  <meta name="description" content="Dream Stats is a football statistics platform tracking player performance, season records, and team stats for our two-team league.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <!-- Sidebar nav is injected here -->
+    <div id="nav-container"></div>
+
+    <!-- Main content area -->
+    <div class="main-content">
+      <!-- Mobile header injected here -->
+      <div id="mobile-header-container"></div>
+
+      <!-- Page content injected here -->
+      <div id="page-container" class="page-content page-enter"></div>
+    </div>
+
+    <!-- Mobile bottom nav injected here -->
+    <div id="bottom-nav-container"></div>
+  </div>
+
+  <!-- App entry point -->
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>StrikerStats - Records</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#ffb4ab",
+                        "on-error": "#690005",
+                        "on-secondary-container": "#e6ecff",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-tertiary-container": "#009542",
+                        "primary-container": "#0f172a",
+                        "surface-bright": "#2c3a4c",
+                        "tertiary-fixed-dim": "#4ae176",
+                        "inverse-on-surface": "#233143",
+                        "tertiary-container": "#001d07",
+                        "on-tertiary": "#003915",
+                        "on-primary-fixed": "#131b2e",
+                        "on-secondary": "#002e6a",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "tertiary": "#4ae176",
+                        "tertiary-fixed": "#6bff8f",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "on-tertiary-fixed-variant": "#005321",
+                        "on-surface": "#d4e4fa",
+                        "secondary": "#adc6ff",
+                        "surface-container-lowest": "#010f1f",
+                        "surface-container-highest": "#273647",
+                        "secondary-container": "#0566d9",
+                        "on-background": "#d4e4fa",
+                        "surface": "#051424",
+                        "surface-variant": "#273647",
+                        "outline": "#909097",
+                        "on-error-container": "#ffdad6",
+                        "background": "#051424",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-primary": "#283044",
+                        "surface-container-high": "#1c2b3c",
+                        "primary-fixed": "#dae2fd",
+                        "on-surface-variant": "#c6c6cd",
+                        "surface-dim": "#051424",
+                        "on-secondary-fixed": "#001a42",
+                        "surface-container-low": "#0d1c2d",
+                        "on-primary-container": "#798098",
+                        "inverse-primary": "#565e74",
+                        "surface-container": "#122131",
+                        "on-secondary-fixed-variant": "#004395",
+                        "outline-variant": "#45464d",
+                        "inverse-surface": "#d4e4fa",
+                        "error-container": "#93000a",
+                        "primary": "#bec6e0",
+                        "on-tertiary-fixed": "#002109",
+                        "surface-tint": "#bec6e0"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "component-padding": "0.75rem 1rem",
+                        "stack-md": "1rem",
+                        "stack-xs": "0.25rem",
+                        "container-margin": "1rem",
+                        "stack-sm": "0.5rem",
+                        "gutter": "0.75rem"
+                    },
+                    fontFamily: {
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "stat-large": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "mono-data": ["JetBrains Mono"]
+                    },
+                    fontSize: {
+                        "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "stat-large": ["24px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "mono-data": ["13px", { "lineHeight": "16px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col md:flex-row antialiased selection:bg-primary-container selection:text-primary">
+<!-- Desktop Navigation Drawer -->
+<nav class="hidden md:flex flex-col h-screen w-72 rounded-r-xl bg-surface-container text-primary py-4 shadow-lg sticky top-0 shrink-0 z-40 border-r border-surface-variant">
+<div class="px-container-margin pb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl">sports_soccer</span>
+<span class="text-headline-md font-headline-md font-bold tracking-tighter">DREAM STATS</span>
+</div>
+<div class="px-4 text-headline-sm font-headline-sm font-bold text-primary mb-4 opacity-80">Menu</div>
+<ul class="flex flex-col gap-1 px-2">
+<li class=""><a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all duration-200" href="#"><span class="material-symbols-outlined">home</span><span class="font-body-md text-body-md">Home</span></a></li>
+<li class=""><a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all duration-200" href="#"><span class="material-symbols-outlined">calendar_month</span><span class="font-body-md text-body-md">Seasons</span></a></li>
+<li class=""><a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all duration-200" href="#"><span class="material-symbols-outlined">groups</span><span class="font-body-md text-body-md">Teams</span></a></li>
+<li class=""><a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all duration-200" href="#"><span class="material-symbols-outlined">person</span><span class="font-body-md text-body-md">Players</span></a></li>
+<li class=""><a class="flex items-center gap-4 px-4 py-3 rounded-full bg-secondary-container text-on-secondary-container transition-all duration-200" href="#"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emoji_events</span><span class="font-body-md text-body-md font-semibold">Records</span></a></li>
+</ul>
+</nav>
+<!-- Mobile Top App Bar -->
+<header class="md:hidden flex items-center justify-between px-container-margin h-16 w-full max-w-full sticky top-0 z-40 bg-surface text-primary border-b border-outline-variant">
+<span class="material-symbols-outlined">sports_soccer</span>
+<div class="text-headline-md font-headline-md font-bold tracking-tighter">DREAM STATS</div>
+<span class="material-symbols-outlined">search</span>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full max-w-7xl mx-auto px-container-margin py-stack-md md:py-8 pb-24 md:pb-12 overflow-x-hidden">
+<!-- Header Section with Image Placeholder -->
+<div class="flex flex-col items-center justify-center mb-10 text-center">
+<div class="w-32 h-32 md:w-48 md:h-48 mb-4">
+<img alt="StrikerStats Records Logo" class="w-full h-full object-contain filter drop-shadow-lg" src="https://lh3.googleusercontent.com/aida/AP1WRLvcdSl-s1owthSldzYX_Ji4UA0x5m_dOizmC5kdId0vwv2fOt5goAOURIohTDa4TflEjdiRfgzECaulHsauFIQUFX1nkO0_0gl7rXaDzBnHdIW-b6Ddz2nI3L0pGnexREcSMoMUGef9GQDhO5sUlf67ZHr7agEgjb4y3MXdZDPLnN2FDdh4goxf1trq4OLQHdWr1AA8FrM9i7oqfGpBLvUdBWeEJEVjiOzWk4mtP39DcOyhShnI4zCIaqI">
+</div>
+<h1 class="text-display-lg font-display-lg text-on-surface mb-2">DREAM STATS</h1>
+<p class="text-on-surface-variant font-body-md max-w-2xl">Definitive statistics and milestones from the history of the beautiful game.</p>
+</div>
+<!-- Bento Grid Layout for Records -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Record Card: Single Season -->
+<section class="bg-surface border border-outline-variant rounded-xl overflow-hidden flex flex-col">
+<div class="bg-surface-container-high px-component-padding py-3 border-b border-outline-variant flex items-center justify-between">
+<h2 class="text-headline-sm font-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">local_fire_department</span>
+                        Most Goals in a Season
+                    </h2>
+</div>
+<div class="flex-1">
+<!-- Row 1 -->
+<a class="flex items-center justify-between p-component-padding border-b border-surface-variant hover:bg-surface-container-lowest transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<span class="font-mono-data text-mono-data text-on-surface-variant w-4 text-right">1</span>
+<img class="w-10 h-10 rounded-full object-cover border border-surface-variant" data-alt="A detailed headshot portrait of a professional soccer player with short dark hair, wearing a dark blue and red striped jersey. High contrast studio lighting against a dark slate background, conveying determination and athletic focus. Modern sports photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhTmcVly07-BH3c3NSdcWVBhbuuk87hcGP8Y5Fli2cQrgjA3Eu9idDUFekym2T_70NzBReVsLNJzyPJpTAvnEsirdwg3e7mb9KDuOVipS54vPLBKejNQgH1aF3PNOwmHThtRdGrlK6ORsoqgnJLGUkIa__tRbMYJ5dV3DOUe0vpAAHjLgiy-2XG2X6PzWf1h6ujMfMkhAkfzf7QXOnQf9EaOACcWXkJ9h-F_qZ26VPABVV9gS_NnZnRA">
+<div>
+<div class="font-body-md text-on-surface font-semibold group-hover:text-primary transition-colors">Lionel Messi</div>
+<div class="font-body-sm text-on-surface-variant flex items-center gap-2"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXtKF3R5ata5jniubHLAcutIEr81buddCAJOAAwsvtU5gfUAtDdQzv_sKQMJDL3Pu09voBDKzrsOZKDzCgBfByMVjfY7bLmXHengsA3TtyrMygDAUDr3OcqQEZtuI_B4_SSDW6NXyuVYc-0qBA9FRAZOSyWYNP6qYUE7gF7N0i5U_fpSVjMj3USB-zveiatJnC4WFn1S8MWtyMRHOiEw1RdT7kkaj9IvJuYrcJspvSdHVSXpnVyytF1A" alt="Saiboys United Logo" class="w-4 h-4 object-contain"> Saiboys United · 2011/12</div>
+</div>
+</div>
+<div class="font-stat-large text-stat-large tabular-nums text-tertiary">73</div>
+</a>
+<!-- Row 2 -->
+<a class="flex items-center justify-between p-component-padding border-b border-surface-variant hover:bg-surface-container-lowest transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<span class="font-mono-data text-mono-data text-on-surface-variant w-4 text-right">2</span>
+<img class="w-10 h-10 rounded-full object-cover border border-surface-variant" data-alt="A detailed headshot portrait of a professional soccer player with short gelled hair, wearing a clean white jersey. High contrast studio lighting against a dark slate background, conveying determination and athletic focus. Modern sports photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnPfwRerlIPvsSb1bnasLcvYJ68gpnfD8U9V45i39vNhHdSDQtfCR1dzsy3IwnO1uY77jP1qoXFxmylCuNMuc3ZCWjsnGHhGFp89yuUK4oIkFoSiP21svSNFOa0ofCsTdl0V2tUAlmdW84BwNxap5kXA2xMDBR1rTZntYKvGbH6g6MWxuA2p0C88ctMRHCdYV1OiWn9xspgDhVZR1aXWZSKTJRqgkzbYmVYjUk0d3JMJsEkMNPK9HSYA">
+<div>
+<div class="font-body-md text-on-surface font-semibold group-hover:text-primary transition-colors">Cristiano Ronaldo</div>
+<div class="font-body-sm text-on-surface-variant flex items-center gap-2"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxPGMLejI2pHmNmb03zagF0esGaOxo_YFAgBMXffVD-abe5NDDXrTDtzCTjcISCxQFhG59-1rNjoD8YIPl7sg_cG_yknOEPh9vYuWm2JI_TV1f2v0jRD6ZEYP7ymws3esXxr2LayzDv2K6e_Zhq4yhMuUPJY4srBnSNDeKzdQb2kVw3d6HvUMmAgLLa9FctTDV2oXRm5nno09zcS4upLWwVeK4_GDT8QVw70MpGlIC8O0Wn6_Antp7_w" alt="Central Stags Logo" class="w-4 h-4 object-contain"> Central Stags · 2014/15</div>
+</div>
+</div>
+<div class="font-stat-large text-stat-large tabular-nums text-on-surface">61</div>
+</a>
+<!-- Row 3 -->
+<a class="flex items-center justify-between p-component-padding hover:bg-surface-container-lowest transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<span class="font-mono-data text-mono-data text-on-surface-variant w-4 text-right">3</span>
+<img class="w-10 h-10 rounded-full object-cover border border-surface-variant" data-alt="A detailed headshot portrait of a tall, blonde professional soccer player wearing a light blue jersey. High contrast studio lighting against a dark slate background, conveying sheer athletic power and focus. Modern sports photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxNsGoEHgISn8h8amOCBsQ7_SDcmYGbkMERUMizzvUqJOr0lJPFeA8YoVB_42TMz7eAOIpHRbVFTxymPLzaAsWolUNjdMgZQL4rXhgWqXwJ1MmeTMMOwT26vrtTywmlS9qiZzQDlHzuij42-oufCbeKOeY300g93GNHcNLWZ0G5WivdctWW7BH_yIbIwUGnRuVqNujbyfPhx2aaxqNnNqQ5NWdjYmxM8mCeHf-SJTOoxCzXRgul4VbJQ">
+<div>
+<div class="font-body-md text-on-surface font-semibold group-hover:text-primary transition-colors">Erling Haaland</div>
+<div class="font-body-sm text-on-surface-variant flex items-center gap-2"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXtKF3R5ata5jniubHLAcutIEr81buddCAJOAAwsvtU5gfUAtDdQzv_sKQMJDL3Pu09voBDKzrsOZKDzCgBfByMVjfY7bLmXHengsA3TtyrMygDAUDr3OcqQEZtuI_B4_SSDW6NXyuVYc-0qBA9FRAZOSyWYNP6qYUE7gF7N0i5U_fpSVjMj3USB-zveiatJnC4WFn1S8MWtyMRHOiEw1RdT7kkaj9IvJuYrcJspvSdHVSXpnVyytF1A" alt="Saiboys United Logo" class="w-4 h-4 object-contain"> Saiboys United · 2022/23</div>
+</div>
+</div>
+<div class="font-stat-large text-stat-large tabular-nums text-on-surface">52</div>
+</a>
+</div>
+</section>
+<!-- Record Card: Career Assists -->
+<section class="bg-surface border border-outline-variant rounded-xl overflow-hidden flex flex-col">
+<div class="bg-surface-container-high px-component-padding py-3 border-b border-outline-variant flex items-center justify-between">
+<h2 class="text-headline-sm font-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">explore</span>
+                        Most Career Assists
+                    </h2>
+</div>
+<div class="flex-1">
+<a class="flex items-center justify-between p-component-padding border-b border-surface-variant hover:bg-surface-container-lowest transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<span class="font-mono-data text-mono-data text-on-surface-variant w-4 text-right">1</span>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center border border-surface-variant text-on-surface-variant font-bold">LM</div>
+<div>
+<div class="font-body-md text-on-surface font-semibold group-hover:text-primary transition-colors">Lionel Messi</div>
+<div class="font-body-sm text-on-surface-variant flex items-center gap-2">
+                                    Active · Multiple Clubs
+                                </div>
+</div>
+</div>
+<div class="font-stat-large text-stat-large tabular-nums text-secondary">361</div>
+</a>
+<a class="flex items-center justify-between p-component-padding border-b border-surface-variant hover:bg-surface-container-lowest transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<span class="font-mono-data text-mono-data text-on-surface-variant w-4 text-right">2</span>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center border border-surface-variant text-on-surface-variant font-bold">KM</div>
+<div>
+<div class="font-body-md text-on-surface font-semibold group-hover:text-primary transition-colors">Kevin De Bruyne</div>
+<div class="font-body-sm text-on-surface-variant flex items-center gap-2"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxPGMLejI2pHmNmb03zagF0esGaOxo_YFAgBMXffVD-abe5NDDXrTDtzCTjcISCxQFhG59-1rNjoD8YIPl7sg_cG_yknOEPh9vYuWm2JI_TV1f2v0jRD6ZEYP7ymws3esXxr2LayzDv2K6e_Zhq4yhMuUPJY4srBnSNDeKzdQb2kVw3d6HvUMmAgLLa9FctTDV2oXRm5nno09zcS4upLWwVeK4_GDT8QVw70MpGlIC8O0Wn6_Antp7_w" alt="Central Stags Logo" class="w-4 h-4 object-contain inline-block mr-1"> Active · Central Stags</div>
+</div>
+</div>
+<div class="font-stat-large text-stat-large tabular-nums text-on-surface">285</div>
+</a>
+<a class="flex items-center justify-between p-component-padding hover:bg-surface-container-lowest transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<span class="font-mono-data text-mono-data text-on-surface-variant w-4 text-right">3</span>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center border border-surface-variant text-on-surface-variant font-bold">RM</div>
+<div>
+<div class="font-body-md text-on-surface font-semibold group-hover:text-primary transition-colors">Thomas Müller</div>
+<div class="font-body-sm text-on-surface-variant flex items-center gap-2"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXtKF3R5ata5jniubHLAcutIEr81buddCAJOAAwsvtU5gfUAtDdQzv_sKQMJDL3Pu09voBDKzrsOZKDzCgBfByMVjfY7bLmXHengsA3TtyrMygDAUDr3OcqQEZtuI_B4_SSDW6NXyuVYc-0qBA9FRAZOSyWYNP6qYUE7gF7N0i5U_fpSVjMj3USB-zveiatJnC4WFn1S8MWtyMRHOiEw1RdT7kkaj9IvJuYrcJspvSdHVSXpnVyytF1A" alt="Saiboys United Logo" class="w-4 h-4 object-contain inline-block mr-1"> Active · Saiboys United</div>
+</div>
+</div>
+<div class="font-stat-large text-stat-large tabular-nums text-on-surface">268</div>
+</a>
+</div>
+</section>
+</div>
+</main>
+<!-- Mobile Bottom Nav Bar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-16 px-2 bg-surface border-t border-outline-variant z-50">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low w-full h-full" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-caps text-label-caps mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low w-full h-full" href="#">
+<span class="material-symbols-outlined">trophy</span>
+<span class="font-label-caps text-label-caps mt-1">Leagues</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low w-full h-full" href="#">
+<span class="material-symbols-outlined">sports_soccer</span>
+<span class="font-label-caps text-label-caps mt-1">Matches</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low w-full h-full" href="#">
+<span class="material-symbols-outlined">newspaper</span>
+<span class="font-label-caps text-label-caps mt-1">News</span>
+</a>
+<a class="flex flex-col items-center justify-center text-tertiary font-bold scale-95 transition-transform w-full h-full relative" href="#">
+<!-- Active indicator dot -->
+<div class="absolute top-1 right-1/2 translate-x-3 w-1.5 h-1.5 rounded-full bg-tertiary"></div>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-caps text-label-caps mt-1">Favorites</span>
+</a>
+</nav>
+
+
+</body></html>
