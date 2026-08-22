@@ -348,7 +348,7 @@ export const players = [
     "teamId": "saiboys-united",
     "position": "Player",
     "number": 9,
-    "image": null,
+    "image": "assets/avatars/robinson.png",
     "seasonStats": [
       {
         "seasonId": "season-1",
@@ -395,7 +395,7 @@ export const players = [
     "teamId": "saiboys-united",
     "position": "Player",
     "number": 57,
-    "image": null,
+    "image": "assets/avatars/shick.png",
     "seasonStats": [
       {
         "seasonId": "season-1",
@@ -600,7 +600,7 @@ export const players = [
     "teamId": "central-stags",
     "position": "Player",
     "number": 46,
-    "image": null,
+    "image": "assets/avatars/vitinhia.png",
     "seasonStats": [
       {
         "seasonId": "season-1",
@@ -925,7 +925,7 @@ export const players = [
     "teamId": "central-stags",
     "position": "Player",
     "number": 17,
-    "image": null,
+    "image": "assets/avatars/frimpong.png",
     "seasonStats": [
       {
         "seasonId": "season-2",
@@ -1070,7 +1070,7 @@ export const players = [
     "teamId": "saiboys-united",
     "position": "Player",
     "number": 7,
-    "image": null,
+    "image": "assets/avatars/carvajal.png",
     "seasonStats": [
       {
         "seasonId": "season-3",
@@ -1105,7 +1105,7 @@ export const players = [
     "teamId": "saiboys-united",
     "position": "Player",
     "number": 24,
-    "image": null,
+    "image": "assets/avatars/leao.png",
     "seasonStats": [
       {
         "seasonId": "season-3",
@@ -1128,7 +1128,7 @@ export const players = [
     "teamId": "central-stags",
     "position": "Player",
     "number": 54,
-    "image": null,
+    "image": "assets/avatars/wirtz.png",
     "seasonStats": [
       {
         "seasonId": "season-3",
@@ -1180,7 +1180,7 @@ export const players = [
     "teamId": "central-stags",
     "position": "Player",
     "number": 26,
-    "image": null,
+    "image": "assets/avatars/sesko.png",
     "seasonStats": [
       {
         "seasonId": "season-3",
@@ -1203,7 +1203,7 @@ export const players = [
     "teamId": "central-stags",
     "position": "Player",
     "number": 31,
-    "image": null,
+    "image": "assets/avatars/frendrup.png",
     "seasonStats": [
       {
         "seasonId": "season-3",
@@ -1238,7 +1238,7 @@ export const players = [
     "teamId": "central-stags",
     "position": "Player",
     "number": 99,
-    "image": null,
+    "image": "assets/avatars/palmer.png",
     "seasonStats": [
       {
         "seasonId": "season-3",
@@ -1301,7 +1301,7 @@ export const players = [
     "teamId": "saiboys-united",
     "position": "Player",
     "number": 68,
-    "image": null,
+    "image": "assets/avatars/ronaldo.png",
     "seasonStats": [
       {
         "seasonId": "season-4",
@@ -1324,7 +1324,7 @@ export const players = [
     "teamId": "saiboys-united",
     "position": "Player",
     "number": 51,
-    "image": null,
+    "image": "assets/avatars/timber.png",
     "seasonStats": [
       {
         "seasonId": "season-4",
@@ -1353,7 +1353,7 @@ export const players = [
     "teamId": "saiboys-united",
     "position": "Player",
     "number": 90,
-    "image": null,
+    "image": "assets/avatars/dembele.png",
     "seasonStats": [
       {
         "seasonId": "season-5",
@@ -1376,7 +1376,7 @@ export const players = [
     "teamId": "saiboys-united",
     "position": "Player",
     "number": 64,
-    "image": null,
+    "image": "assets/avatars/vini-jr.png",
     "seasonStats": [
       {
         "seasonId": "season-5",
@@ -1399,7 +1399,7 @@ export const players = [
     "teamId": "central-stags",
     "position": "Player",
     "number": 59,
-    "image": null,
+    "image": "assets/avatars/olise.png",
     "seasonStats": [
       {
         "seasonId": "season-5",
@@ -1422,7 +1422,7 @@ export const players = [
     "teamId": "central-stags",
     "position": "Player",
     "number": 94,
-    "image": null,
+    "image": "assets/avatars/raphinia.png",
     "seasonStats": [
       {
         "seasonId": "season-5",
