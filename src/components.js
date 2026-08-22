@@ -71,6 +71,12 @@ export function renderAvatar(player, sizeClass = '') {
     return `<img src="${player.image}" alt="${player.name}" class="avatar ${sizeClass}" style="object-fit:cover; border-radius:50%;" title="${player.name}">`;
   }
   
+  // Only show the jersey for large display areas. Use initials for small tables.
+  if (sizeClass === 'avatar-sm' || sizeClass === '') {
+    const initials = getInitials(player.name);
+    return `<div class="avatar ${sizeClass}" title="${player.name}">${initials}</div>`;
+  }
+  
   let primaryColor = '#1d3557';
   let highlightColor = '#e63946';
   
