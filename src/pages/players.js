@@ -9,6 +9,7 @@ import { renderAvatar, renderTeamLogo, renderEmptyState } from '../components.js
 let currentSearch = '';
 let currentTeamFilter = 'all';
 let currentPositionFilter = 'all';
+let currentSort = 'default';
 
 function renderPlayerCard(player) {
   const team = getTeam(player.teamId);
@@ -84,6 +85,15 @@ function getFilteredPlayers() {
     filtered = filtered.filter(p => p.name.toLowerCase().includes(lower));
   }
 
+  // Sort logic
+  if (currentSort !== 'default') {
+    filtered.sort((a, b) => {
+      const statA = getCareerStats(a);
+      const statB = getCareerStats(b);
+      return statB[currentSort] - statA[currentSort];
+    });
+  }
+
   return filtered;
 }
 
@@ -101,9 +111,24 @@ export function renderPlayersPage() {
     `<button class="btn-chip ${currentPositionFilter === 'Goalkeeper' ? 'active' : ''}" data-pos="Goalkeeper">Goalkeepers</button>`,
   ].join('');
 
+  const sortFilterChips = [
+    `<button class="btn-chip ${currentSort === 'default' ? 'active' : ''}" data-sort="default">Default</button>`,
+    `<button class="btn-chip ${currentSort === 'goals' ? 'active' : ''}" data-sort="goals">Goals</button>`,
+    `<button class="btn-chip ${currentSort === 'assists' ? 'active' : ''}" data-sort="assists">Assists</button>`,
+    `<button class="btn-chip ${currentSort === 'ga' ? 'active' : ''}" data-sort="ga">G+A</button>`,
+  ].join('');
+
   return `
     <div>
-      <h1 class="text-headline-md" style="margin-bottom:var(--stack-md)">Players</h1>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:var(--stack-md);flex-wrap:wrap;gap:16px;">
+        <h1 class="text-headline-md" style="margin:0">Players</h1>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span class="text-body-sm color-on-surface-variant">Sort by:</span>
+          <div style="display:flex;gap:4px;" id="sort-filters">
+            ${sortFilterChips}
+          </div>
+        </div>
+      </div>
 
       <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:var(--stack-md)">
         <div class="search-wrapper" style="max-width:400px;">
@@ -156,6 +181,15 @@ export function setupPlayersPage() {
       document.querySelectorAll('#pos-filters .btn-chip').forEach(b => b.classList.remove('active'));
       e.currentTarget.classList.add('active');
       currentPositionFilter = e.currentTarget.dataset.pos;
+      updateGrid();
+    });
+  });
+
+  document.querySelectorAll('#sort-filters .btn-chip').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      document.querySelectorAll('#sort-filters .btn-chip').forEach(b => b.classList.remove('active'));
+      e.currentTarget.classList.add('active');
+      currentSort = e.currentTarget.dataset.sort;
       updateGrid();
     });
   });
