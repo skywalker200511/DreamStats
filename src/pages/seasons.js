@@ -17,12 +17,12 @@ export function renderSeasonsPage(seasonSlug) {
       const statusBadge = season.status === 'active' ? renderBadge('Active', 'scorer') : renderBadge('Completed', 'assists');
       
       return `
-        <a href="#/seasons/${season.slug}" class="card col-span-12 md:col-span-6 lg:col-span-4" style="text-decoration:none;">
+        <a href="#/seasons/${season.slug}" class="card card-padding col-span-12 md:col-span-6 lg:col-span-4" style="text-decoration:none;">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
-            <h3 class="text-headline-md">${season.name}</h3>
+            <h3 class="text-headline-md color-primary">${season.name}</h3>
             ${statusBadge}
           </div>
-          <div style="margin-bottom:8px;"><span class="text-label-caps">MVP:</span> <span class="text-body-md">${mvpName}</span></div>
+          <div style="margin-bottom:8px;"><span class="text-label-caps color-on-surface-variant">MVP:</span> <span class="text-body-md">${mvpName}</span></div>
           <div><span class="text-label-caps">Top Scorer:</span> <span class="text-body-md">${topScorer}</span></div>
         </a>
       `;
