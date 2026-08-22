@@ -1134,7 +1134,7 @@ export const players = [
     "teamId": "central-stags",
     "position": "Attacker",
     "number": 18,
-    "image": null,
+    "image": "assets/avatars/woltemade.png",
     "seasonStats": [
       {
         "seasonId": "season-3",
