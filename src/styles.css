@@ -8,40 +8,40 @@
 /* ── CSS Custom Properties ───────────────────────────────── */
 :root {
   /* Surface / Background hierarchy */
-  --bg: #051424;
-  --surface: #051424;
-  --surface-dim: #051424;
-  --surface-bright: #2c3a4c;
-  --surface-container-lowest: #010f1f;
-  --surface-container-low: #0d1c2d;
-  --surface-container: #122131;
-  --surface-container-high: #1c2b3c;
-  --surface-container-highest: #273647;
-  --surface-variant: #273647;
+  --bg: #000000;
+  --surface: #000000;
+  --surface-dim: #000000;
+  --surface-bright: #222222;
+  --surface-container-lowest: #050505;
+  --surface-container-low: #111111;
+  --surface-container: #161616;
+  --surface-container-high: #222222;
+  --surface-container-highest: #2d2d2d;
+  --surface-variant: #2d2d2d;
 
   /* Text */
-  --on-surface: #d4e4fa;
-  --on-surface-variant: #c6c6cd;
-  --on-background: #d4e4fa;
-  --inverse-surface: #d4e4fa;
-  --inverse-on-surface: #233143;
+  --on-surface: #ffffff;
+  --on-surface-variant: #a0a0a0;
+  --on-background: #ffffff;
+  --inverse-surface: #ffffff;
+  --inverse-on-surface: #111111;
 
-  /* Primary (slate blue) */
-  --primary: #bec6e0;
-  --on-primary: #283044;
-  --primary-container: #0f172a;
-  --on-primary-container: #798098;
+  /* Primary (FotMob Green) */
+  --primary: #12d972;
+  --on-primary: #000000;
+  --primary-container: #003318;
+  --on-primary-container: #b3ffce;
 
-  /* Secondary (action blue / assists) */
-  --secondary: #adc6ff;
-  --on-secondary: #002e6a;
-  --secondary-container: #0566d9;
-  --on-secondary-container: #e6ecff;
+  /* Secondary (Subtle blue-gray for assists) */
+  --secondary: #90a4ae;
+  --on-secondary: #000000;
+  --secondary-container: #263238;
+  --on-secondary-container: #eceff1;
 
-  /* Tertiary (pitch green / goals) */
-  --tertiary: #4ae176;
-  --on-tertiary: #003915;
-  --tertiary-container: #001d07;
+  /* Tertiary (Gold for awards/highlights) */
+  --tertiary: #ffb300;
+  --on-tertiary: #000000;
+  --tertiary-container: #4d3600;
 
   /* Error */
   --error: #ffb4ab;
@@ -96,6 +96,8 @@ body {
   font-weight: 400;
   color: var(--on-surface);
   background-color: var(--bg);
+  background-image: radial-gradient(var(--surface-container-highest) 1px, transparent 1px);
+  background-size: 24px 24px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
@@ -490,7 +492,9 @@ table {
 
 /* ── Cards ───────────────────────────────────────────────── */
 .card {
-  background: var(--surface-container);
+  background: rgba(22, 22, 22, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--outline-variant);
   border-radius: var(--radius-xl);
   overflow: hidden;
@@ -524,7 +528,9 @@ table {
 
 /* Stat cards */
 .stat-card {
-  background: var(--surface-container);
+  background: rgba(22, 22, 22, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--outline-variant);
   border-radius: var(--radius-xl);
   padding: var(--component-padding-y) var(--component-padding-x);
