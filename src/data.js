@@ -33,7 +33,7 @@ export const seasons = [
   { id: 'season-3', name: 'Season 3', slug: 'season-3', status: 'completed', mvpPlayerId: 'haaland' },
   { id: 'season-4', name: 'Season 4', slug: 'season-4', status: 'completed', mvpPlayerId: 'haaland' },
   { id: 'season-5', name: 'Season 5', slug: 'season-5', status: 'completed', mvpPlayerId: 'haaland' },
-  { id: 'season-6', name: 'Season 6', slug: 'season-6', status: 'active', mvpPlayerId: 'haaland' },
+  { id: 'season-6', name: 'Season 6', slug: 'season-6', status: 'active', mvpPlayerId: 'dembele' },
 ];
 
 export const players = [
