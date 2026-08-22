@@ -67,8 +67,32 @@ export function renderBottomNav(activePage) {
 // ── Avatars ─────────────────────────────────────────────────
 
 export function renderAvatar(player, sizeClass = '') {
-  const initials = getInitials(player.name);
-  return `<div class="avatar ${sizeClass}" title="${player.name}">${initials}</div>`;
+  if (player.image) {
+    return `<img src="${player.image}" alt="${player.name}" class="avatar ${sizeClass}" style="object-fit:cover; border-radius:50%;" title="${player.name}">`;
+  }
+  
+  let primaryColor = '#1d3557';
+  let highlightColor = '#e63946';
+  
+  if (player.teamId === 'saiboys-united') {
+    primaryColor = '#e63946';
+    highlightColor = '#ffffff';
+  }
+  
+  const num = player.number || '';
+  
+  const svg = `
+    <svg viewBox="0 0 100 100" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 30 15 C 30 15, 50 30, 70 15 L 95 35 L 85 55 L 75 45 L 75 95 L 25 95 L 25 45 L 15 55 L 5 35 Z" fill="${primaryColor}" />
+      <path d="M 30 15 C 30 15, 50 30, 70 15" fill="none" stroke="${highlightColor}" stroke-width="4" stroke-linecap="round" />
+      <path d="M 95 35 L 85 55" fill="none" stroke="${highlightColor}" stroke-width="4" stroke-linecap="round" />
+      <path d="M 15 55 L 5 35" fill="none" stroke="${highlightColor}" stroke-width="4" stroke-linecap="round" />
+      <path d="M 25 95 L 75 95" fill="none" stroke="${highlightColor}" stroke-width="4" stroke-linecap="round" />
+      <text x="50" y="65" font-family="Inter, sans-serif" font-size="34" font-weight="900" fill="${highlightColor}" text-anchor="middle" dominant-baseline="middle">${num}</text>
+    </svg>
+  `;
+
+  return `<div class="avatar ${sizeClass}" title="${player.name}" style="background: transparent; border: none; overflow: visible;">${svg}</div>`;
 }
 
 // ── Team Logos ───────────────────────────────────────────────
