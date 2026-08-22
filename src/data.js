@@ -42,7 +42,7 @@ export const players = [
     "name": "Haaland",
     "slug": "haaland",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Attacker",
     "number": 18,
     "image": "assets/avatars/haaland.png",
     "seasonStats": [
@@ -89,7 +89,7 @@ export const players = [
     "name": "Openda",
     "slug": "openda",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Attacker",
     "number": 52,
     "image": "assets/avatars/openda.png",
     "seasonStats": [
@@ -136,7 +136,7 @@ export const players = [
     "name": "Zaccagni",
     "slug": "zaccagni",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Attacker",
     "number": 54,
     "image": "assets/avatars/zaccagni.png",
     "seasonStats": [
@@ -165,7 +165,7 @@ export const players = [
     "name": "Minteh",
     "slug": "minteh",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Attacker",
     "number": 92,
     "image": "assets/avatars/minteh.png",
     "seasonStats": [
@@ -212,7 +212,7 @@ export const players = [
     "name": "Enzo",
     "slug": "enzo",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Midfielder",
     "number": 27,
     "image": "assets/avatars/enzo.png",
     "seasonStats": [
@@ -247,7 +247,7 @@ export const players = [
     "name": "Barrios",
     "slug": "barrios",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Midfielder",
     "number": 76,
     "image": "assets/avatars/barrios.png",
     "seasonStats": [
@@ -282,7 +282,7 @@ export const players = [
     "name": "Van dijk",
     "slug": "van-dijk",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Defender",
     "number": 15,
     "image": "assets/avatars/van-dijk.png",
     "seasonStats": [
@@ -323,7 +323,7 @@ export const players = [
     "name": "Upamecano",
     "slug": "upamecano",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Defender",
     "number": 59,
     "image": "assets/avatars/upamecano.png",
     "seasonStats": [
@@ -346,7 +346,7 @@ export const players = [
     "name": "Robinson",
     "slug": "robinson",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Defender",
     "number": 9,
     "image": "assets/avatars/robinson.png",
     "seasonStats": [
@@ -393,7 +393,7 @@ export const players = [
     "name": "Shick",
     "slug": "shick",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Attacker",
     "number": 57,
     "image": "assets/avatars/shick.png",
     "seasonStats": [
@@ -428,7 +428,7 @@ export const players = [
     "name": "Van de ven",
     "slug": "van-de-ven",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Defender",
     "number": 39,
     "image": "assets/avatars/van-de-ven.png",
     "seasonStats": [
@@ -475,7 +475,7 @@ export const players = [
     "name": "Emegha",
     "slug": "emegha",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Attacker",
     "number": 19,
     "image": "assets/avatars/emegha.png",
     "seasonStats": [
@@ -522,7 +522,7 @@ export const players = [
     "name": "Cherki",
     "slug": "cherki",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Midfielder",
     "number": 78,
     "image": "assets/avatars/cherki.png",
     "seasonStats": [
@@ -551,7 +551,7 @@ export const players = [
     "name": "Barcola",
     "slug": "barcola",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Attacker",
     "number": 31,
     "image": "assets/avatars/barcola.png",
     "seasonStats": [
@@ -598,7 +598,7 @@ export const players = [
     "name": "Vitinhia",
     "slug": "vitinhia",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Midfielder",
     "number": 46,
     "image": "assets/avatars/vitinhia.png",
     "seasonStats": [
@@ -633,7 +633,7 @@ export const players = [
     "name": "Man",
     "slug": "man",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Midfielder",
     "number": 36,
     "image": "assets/avatars/man.png",
     "seasonStats": [
@@ -656,7 +656,7 @@ export const players = [
     "name": "Rudiger",
     "slug": "rudiger",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Defender",
     "number": 42,
     "image": "assets/avatars/rudiger.png",
     "seasonStats": [
@@ -697,7 +697,7 @@ export const players = [
     "name": "Bastoni",
     "slug": "bastoni",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Defender",
     "number": 98,
     "image": "assets/avatars/bastoni.png",
     "seasonStats": [
@@ -738,7 +738,7 @@ export const players = [
     "name": "De Bruyne",
     "slug": "de-bruyne",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Midfielder",
     "number": 74,
     "image": "assets/avatars/de-bruyne.png",
     "seasonStats": [
@@ -761,7 +761,7 @@ export const players = [
     "name": "Rabiot",
     "slug": "rabiot",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Midfielder",
     "number": 48,
     "image": "assets/avatars/rabiot.png",
     "seasonStats": [
@@ -796,7 +796,7 @@ export const players = [
     "name": "Doku",
     "slug": "doku",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Attacker",
     "number": 19,
     "image": "assets/avatars/doku.png",
     "seasonStats": [
@@ -831,7 +831,7 @@ export const players = [
     "name": "Pulisic",
     "slug": "pulisic",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Attacker",
     "number": 81,
     "image": "assets/avatars/pulisic.png",
     "seasonStats": [
@@ -889,7 +889,7 @@ export const players = [
     "name": "Cash",
     "slug": "cash",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Defender",
     "number": 81,
     "image": "assets/avatars/cash.png",
     "seasonStats": [
@@ -906,7 +906,7 @@ export const players = [
     "name": "Frimpong",
     "slug": "frimpong",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Defender",
     "number": 17,
     "image": "assets/avatars/frimpong.png",
     "seasonStats": [
@@ -947,7 +947,7 @@ export const players = [
     "name": "Alessandro Buongiorno",
     "slug": "buongiorno",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Defender",
     "number": 68,
     "image": "assets/avatars/buongiorno.png",
     "seasonStats": [
@@ -970,7 +970,7 @@ export const players = [
     "name": "Schalde",
     "slug": "schalde",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Attacker",
     "number": 7,
     "image": "assets/avatars/schalde.png",
     "seasonStats": [
@@ -987,7 +987,7 @@ export const players = [
     "name": "Alt Nouri",
     "slug": "alt-nouri",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Defender",
     "number": 95,
     "image": "assets/avatars/alt-nouri.png",
     "seasonStats": [
@@ -1022,7 +1022,7 @@ export const players = [
     "name": "Mbeumo",
     "slug": "mbeumo",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Attacker",
     "number": 96,
     "image": "assets/avatars/mbeumo.png",
     "seasonStats": [
@@ -1057,7 +1057,7 @@ export const players = [
     "name": "Carvajal",
     "slug": "carvajal",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Defender",
     "number": 7,
     "image": "assets/avatars/carvajal.png",
     "seasonStats": [
@@ -1092,7 +1092,7 @@ export const players = [
     "name": "Leao",
     "slug": "leao",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Attacker",
     "number": 24,
     "image": "assets/avatars/leao.png",
     "seasonStats": [
@@ -1115,7 +1115,7 @@ export const players = [
     "name": "Wirtz",
     "slug": "wirtz",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Midfielder",
     "number": 54,
     "image": "assets/avatars/wirtz.png",
     "seasonStats": [
@@ -1132,7 +1132,7 @@ export const players = [
     "name": "Woltemade",
     "slug": "woltemade",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Attacker",
     "number": 18,
     "image": null,
     "seasonStats": [
@@ -1167,7 +1167,7 @@ export const players = [
     "name": "Sesko",
     "slug": "sesko",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Attacker",
     "number": 26,
     "image": "assets/avatars/sesko.png",
     "seasonStats": [
@@ -1190,7 +1190,7 @@ export const players = [
     "name": "Frendrup",
     "slug": "frendrup",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Midfielder",
     "number": 31,
     "image": "assets/avatars/frendrup.png",
     "seasonStats": [
@@ -1225,7 +1225,7 @@ export const players = [
     "name": "Palmer",
     "slug": "palmer",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Midfielder",
     "number": 99,
     "image": "assets/avatars/palmer.png",
     "seasonStats": [
@@ -1248,7 +1248,7 @@ export const players = [
     "name": "Bouroginous",
     "slug": "bouroginous",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Midfielder",
     "number": 23,
     "image": null,
     "seasonStats": [
@@ -1271,7 +1271,7 @@ export const players = [
     "name": "Kolo Muani",
     "slug": "kolo-muani",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Attacker",
     "number": 76,
     "image": null,
     "seasonStats": [
@@ -1288,7 +1288,7 @@ export const players = [
     "name": "Ronaldo",
     "slug": "ronaldo",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Attacker",
     "number": 68,
     "image": "assets/avatars/ronaldo.png",
     "seasonStats": [
@@ -1311,7 +1311,7 @@ export const players = [
     "name": "Timber",
     "slug": "timber",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Defender",
     "number": 51,
     "image": "assets/avatars/timber.png",
     "seasonStats": [
@@ -1340,7 +1340,7 @@ export const players = [
     "name": "Dembele",
     "slug": "dembele",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Attacker",
     "number": 90,
     "image": "assets/avatars/dembele.png",
     "seasonStats": [
@@ -1363,7 +1363,7 @@ export const players = [
     "name": "Vini jr",
     "slug": "vini-jr",
     "teamId": "saiboys-united",
-    "position": "Player",
+    "position": "Attacker",
     "number": 64,
     "image": "assets/avatars/vini-jr.png",
     "seasonStats": [
@@ -1386,7 +1386,7 @@ export const players = [
     "name": "Olise",
     "slug": "olise",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Midfielder",
     "number": 59,
     "image": "assets/avatars/olise.png",
     "seasonStats": [
@@ -1409,7 +1409,7 @@ export const players = [
     "name": "Raphinia",
     "slug": "raphinia",
     "teamId": "central-stags",
-    "position": "Player",
+    "position": "Attacker",
     "number": 94,
     "image": "assets/avatars/raphinia.png",
     "seasonStats": [
