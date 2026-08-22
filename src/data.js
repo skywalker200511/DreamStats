@@ -32,7 +32,8 @@ export const seasons = [
   { id: 'season-2', name: 'Season 2', slug: 'season-2', status: 'completed', mvpPlayerId: 'haaland' },
   { id: 'season-3', name: 'Season 3', slug: 'season-3', status: 'completed', mvpPlayerId: 'haaland' },
   { id: 'season-4', name: 'Season 4', slug: 'season-4', status: 'completed', mvpPlayerId: 'haaland' },
-  { id: 'season-5', name: 'Season 5', slug: 'season-5', status: 'active', mvpPlayerId: 'haaland' },
+  { id: 'season-5', name: 'Season 5', slug: 'season-5', status: 'completed', mvpPlayerId: 'haaland' },
+  { id: 'season-6', name: 'Season 6', slug: 'season-6', status: 'active', mvpPlayerId: 'haaland' },
 ];
 
 export const players = [
@@ -74,6 +75,12 @@ export const players = [
         "games": 40,
         "goals": 58,
         "assists": 27
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 52,
+        "assists": 28
       }
     ]
   },
@@ -115,6 +122,12 @@ export const players = [
         "games": 40,
         "goals": 2,
         "assists": 7
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 3,
+        "assists": 8
       }
     ]
   },
@@ -185,6 +198,12 @@ export const players = [
         "games": 40,
         "goals": 5,
         "assists": 11
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 4,
+        "assists": 6
       }
     ]
   },
@@ -290,6 +309,12 @@ export const players = [
         "games": 40,
         "goals": 0,
         "assists": 3
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 0,
+        "assists": 3
       }
     ]
   },
@@ -354,6 +379,12 @@ export const players = [
         "games": 40,
         "goals": 6,
         "assists": 10
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 2,
+        "assists": 5
       }
     ]
   },
@@ -430,6 +461,12 @@ export const players = [
         "games": 40,
         "goals": 2,
         "assists": 5
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 1,
+        "assists": 4
       }
     ]
   },
@@ -471,6 +508,12 @@ export const players = [
         "games": 40,
         "goals": 45,
         "assists": 25
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 54,
+        "assists": 26
       }
     ]
   },
@@ -541,6 +584,12 @@ export const players = [
         "games": 40,
         "goals": 4,
         "assists": 3
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 14,
+        "assists": 7
       }
     ]
   },
@@ -570,6 +619,12 @@ export const players = [
         "games": 38,
         "goals": 2,
         "assists": 2
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 0,
+        "assists": 6
       }
     ]
   },
@@ -628,6 +683,12 @@ export const players = [
         "games": 40,
         "goals": 1,
         "assists": 1
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 0,
+        "assists": 3
       }
     ]
   },
@@ -680,6 +741,12 @@ export const players = [
         "games": 40,
         "goals": 1,
         "assists": 1
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 0,
+        "assists": 2
       }
     ]
   },
@@ -732,6 +799,12 @@ export const players = [
         "games": 48,
         "goals": 2,
         "assists": 4
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 1,
+        "assists": 1
       }
     ]
   },
@@ -802,6 +875,12 @@ export const players = [
         "games": 40,
         "goals": 11,
         "assists": 5
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 7,
+        "assists": 7
       }
     ]
   },
@@ -871,6 +950,12 @@ export const players = [
         "games": 40,
         "goals": 6,
         "assists": 17
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 7,
+        "assists": 4
       }
     ]
   },
@@ -912,7 +997,7 @@ export const players = [
     "id": "alt-nouri",
     "name": "Alt Nouri",
     "slug": "alt-nouri",
-    "teamId": "central-stags",
+    "teamId": "saiboys-united",
     "position": "Player",
     "number": 95,
     "image": null,
@@ -934,6 +1019,12 @@ export const players = [
         "games": 48,
         "goals": 0,
         "assists": 1
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 1,
+        "assists": 0
       }
     ]
   },
@@ -963,6 +1054,12 @@ export const players = [
         "games": 40,
         "goals": 1,
         "assists": 0
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 1,
+        "assists": 2
       }
     ]
   },
@@ -990,6 +1087,12 @@ export const players = [
       {
         "seasonId": "season-5",
         "games": 40,
+        "goals": 0,
+        "assists": 1
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
         "goals": 0,
         "assists": 1
       }
@@ -1061,6 +1164,12 @@ export const players = [
         "games": 40,
         "goals": 0,
         "assists": 1
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 2,
+        "assists": 3
       }
     ]
   },
@@ -1113,6 +1222,12 @@ export const players = [
         "games": 40,
         "goals": 3,
         "assists": 7
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 2,
+        "assists": 6
       }
     ]
   },
@@ -1222,6 +1337,12 @@ export const players = [
         "games": 40,
         "goals": 1,
         "assists": 1
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 1,
+        "assists": 2
       }
     ]
   },
@@ -1239,6 +1360,12 @@ export const players = [
         "games": 40,
         "goals": 41,
         "assists": 31
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 48,
+        "assists": 32
       }
     ]
   },
@@ -1255,6 +1382,12 @@ export const players = [
         "seasonId": "season-5",
         "games": 40,
         "goals": 3,
+        "assists": 0
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 2,
         "assists": 0
       }
     ]
@@ -1273,6 +1406,12 @@ export const players = [
         "games": 40,
         "goals": 35,
         "assists": 22
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 22,
+        "assists": 15
       }
     ]
   },
@@ -1290,6 +1429,12 @@ export const players = [
         "games": 40,
         "goals": 4,
         "assists": 5
+      },
+      {
+        "seasonId": "season-6",
+        "games": 39,
+        "goals": 0,
+        "assists": 4
       }
     ]
   }
