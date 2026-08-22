@@ -693,23 +693,6 @@ export const players = [
     ]
   },
   {
-    "id": "boungiornio",
-    "name": "Boungiornio",
-    "slug": "boungiornio",
-    "teamId": "central-stags",
-    "position": "Player",
-    "number": 40,
-    "image": "assets/avatars/boungiornio.png",
-    "seasonStats": [
-      {
-        "seasonId": "season-1",
-        "games": 40,
-        "goals": 3,
-        "assists": 2
-      }
-    ]
-  },
-  {
     "id": "bastoni",
     "name": "Bastoni",
     "slug": "bastoni",
@@ -961,7 +944,7 @@ export const players = [
   },
   {
     "id": "buongiorno",
-    "name": "Buongiorno",
+    "name": "Alessandro Buongiorno",
     "slug": "buongiorno",
     "teamId": "central-stags",
     "position": "Player",
@@ -973,6 +956,12 @@ export const players = [
         "games": 35,
         "goals": 1,
         "assists": 0
+      },
+      {
+        "seasonId": "season-1",
+        "games": 40,
+        "goals": 3,
+        "assists": 2
       }
     ]
   },
